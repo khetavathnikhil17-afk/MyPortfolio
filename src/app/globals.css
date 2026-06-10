@@ -1,26 +1,749 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=satoshi@300,400,500,700,900&display=swap");
 @import "tailwindcss";
 
+/* ============================================
+   THEME VARIABLES
+   ============================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    /* Colors */
+    --color-dark: #080808;
+    --color-dark-100: #0f0f0f;
+    --color-dark-200: #161616;
+    --color-dark-300: #1f1f1f;
+    --color-dark-400: #2a2a2a;
+    --color-border: #222222;
+    --color-border-light: #333333;
+
+    --color-text: #ffffff;
+    --color-text-muted: #a8a8b0;
+    --color-text-dim: #8a8a92;
+
+    --color-accent: #e8b878;
+    --color-accent-light: #f5d4a3;
+    --color-accent-dark: #d4a05a;
+    --color-accent-glow: rgba(232, 184, 120, 0.3);
+
+    /* Typography */
+    --font-clash: "Clash Display", sans-serif;
+    --font-satoshi: "Satoshi", sans-serif;
+
+    /* Spacing */
+    --section-padding: 10rem;
+    --container-max: 1400px;
+
+    /* Transitions */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+    --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 32px;
+    --radius-full: 9999px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================
+   TAILWIND THEME
+   ============================================ */
+@theme {
+    /* Colors */
+    --color-dark: #080808;
+    --color-dark-100: #0f0f0f;
+    --color-dark-200: #161616;
+    --color-dark-300: #1f1f1f;
+    --color-dark-400: #2a2a2a;
+    --color-border: #222222;
+    --color-border-light: #333333;
+    --color-text: #ffffff;
+    --color-text-muted: #888888;
+    --color-text-dim: #8a8a92;
+    --color-accent: #e8b878;
+    --color-accent-light: #f5d4a3;
+    --color-accent-dark: #d4a05a;
+
+    /* Fonts */
+    --font-clash: "Clash Display", sans-serif;
+    --font-satoshi: "Satoshi", sans-serif;
+
+    /* Spacing */
+    --spacing-section: 10rem;
+
+    /* Border radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 32px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================
+   BASE STYLES
+   ============================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: auto;
+    /* We use Lenis for smooth scroll */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-text);
+    font-family: var(--font-satoshi);
+    overflow-x: hidden;
+}
+
+/* Custom cursor only on desktop with fine pointer */
+@media (pointer: fine) {
+    body {
+        cursor: none;
+    }
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-light);
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+::selection {
+    background: var(--color-accent);
+    color: white;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+.font-clash {
+    font-family: var(--font-clash);
+}
+
+.font-satoshi {
+    font-family: var(--font-satoshi);
+}
+
+/* Heading sizes */
+.text-hero {
+    font-size: clamp(3.5rem, 10vw, 10rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    font-family: var(--font-clash);
+    font-weight: 600;
+}
+
+.text-display {
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-family: var(--font-clash);
+    font-weight: 600;
+}
+
+.text-heading {
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-family: var(--font-clash);
+    font-weight: 600;
+}
+
+.text-subheading {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.text-body {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.7;
+}
+
+.text-small {
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
+    line-height: 1.5;
+}
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+.container-main {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@media (min-width: 768px) {
+    .container-main {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container-main {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+.section-padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+/* ============================================
+   GRAIN TEXTURE OVERLAY
+   ============================================ */
+.grain {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    animation: grain 0.5s steps(2) infinite;
+}
+
+@keyframes grain {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(-2%, -3%);
+    }
+
+    20% {
+        transform: translate(3%, 2%);
+    }
+
+    30% {
+        transform: translate(-1%, 4%);
+    }
+
+    40% {
+        transform: translate(2%, -1%);
+    }
+
+    50% {
+        transform: translate(-3%, 3%);
+    }
+
+    60% {
+        transform: translate(1%, -2%);
+    }
+
+    70% {
+        transform: translate(-2%, 1%);
+    }
+
+    80% {
+        transform: translate(3%, -3%);
+    }
+
+    90% {
+        transform: translate(-1%, 2%);
+    }
+
+    100% {
+        transform: translate(2%, 0%);
+    }
+}
+
+/* ============================================
+   ACCENT GLOW
+   ============================================ */
+.glow {
+    box-shadow: 0 0 40px var(--color-accent-glow);
+}
+
+.glow-text {
+    text-shadow: 0 0 40px var(--color-accent-glow);
+}
+
+/* ============================================
+   HORIZONTAL LINE
+   ============================================ */
+.divider {
+    width: 100%;
+    height: 1px;
+    background: var(--color-border);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}
+
+/* ============================================
+   LINK UNDERLINE HOVER
+   ============================================ */
+.link-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.link-hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.4s var(--ease-out-expo);
+}
+
+.link-hover:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   CARD STYLES
+   ============================================ */
+.card {
+    background: var(--color-dark-200);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--color-border-light);
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: var(--color-accent);
+    color: white;
+    border-radius: var(--radius-full);
+    font-family: var(--font-satoshi);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s var(--ease-out-expo);
+    cursor: none;
+    border: none;
+    outline: none;
+}
+
+.btn-primary:hover {
+    background: var(--color-accent-light);
+    transform: scale(1.03);
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: transparent;
+    color: white;
+    border-radius: var(--radius-full);
+    font-family: var(--font-satoshi);
+    font-weight: 500;
+    font-size: 0.95rem;
+    border: 1px solid var(--color-border-light);
+    transition: all 0.3s var(--ease-out-expo);
+    cursor: none;
+}
+
+.btn-outline:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* ============================================
+   BADGE / TAG
+   ============================================ */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.875rem;
+    background: var(--color-dark-300);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-satoshi);
+}
+
+/* ============================================
+   HIDE SCROLLBAR UTILITY
+   ============================================ */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* ============================================
+   INTRO SCREEN
+   ============================================ */
+@keyframes introSpin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes introFadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes introGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes introDotPulse {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+@keyframes pulseHero {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes scrollLineHero {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(300%);
+    }
+}
+
+/* ============================================
+    FOOTER
+   ============================================ */
+@keyframes marqueeFooter {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+    display: inline-flex;
+    gap: 4rem;
+    animation: marqueeFooter 40s linear infinite;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+@keyframes pulseFooter {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.3); }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+    .hero-bottom-row {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: left !important;
+    }
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2.5rem 1.5rem !important;
+    }
+    .project-row {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+    .project-visual {
+        order: 1 !important;
+    }
+    .project-row > *:last-child {
+        padding: 0 !important;
+    }
+    .projects-archive-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    .services-header {
+        grid-template-columns: 1fr !important;
+        align-items: start !important;
+    }
+    .service-row {
+        grid-template-columns: 60px 1fr 50px !important;
+        gap: 1.5rem !important;
+    }
+    .service-row > *:nth-child(4) {
+        display: none !important;
+    }
+    .service-expanded {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        padding: 2rem 1rem 1rem !important;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 3rem !important;
+    }
+    .brand-mission-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+    }
+    .brand-values-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    .desktop-menu,
+    .cta-button {
+        display: none !important;
+    }
+    .mobile-toggle {
+        display: flex !important;
+    }
+    .hero-credibility {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem !important;
+    }
+    .hero-credibility > div:last-child {
+        display: none !important;
+    }
+    .service-row {
+        grid-template-columns: 40px 1fr 40px !important;
+        gap: 1rem !important;
+    }
+    .service-row > *:nth-child(4) {
+        display: none !important;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+}
+
+/* Mobile touch targets */
+@media (pointer: coarse) {
+    a, button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    .btn-primary, .btn-outline {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .timeline-row {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        text-align: left !important;
+    }
+    .timeline-row > *:nth-child(2) {
+        display: none !important;
+    }
+    .timeline-row > * {
+        order: unset !important;
+        text-align: left !important;
+    }
+    .brand-values-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Skip to content link */
+.skip-to-content {
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    padding: 1rem 2rem;
+    background: var(--color-accent);
+    color: #000;
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    text-decoration: none;
+    transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+    top: 1rem;
+}
+
+/* Focus styles for interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Remove default outline for mouse users */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .grain {
+        animation: none !important;
+    }
+
+    .animate-marquee {
+        animation: none !important;
+    }
+
+    .marquee-track {
+        animation: marqueeFooter 40s linear infinite !important;
+    }
+}
+
+/* Touch device cursor fix */
+@media (pointer: coarse) {
+    body {
+        cursor: auto !important;
+    }
+
+    a, button, input, textarea, select {
+        cursor: auto !important;
+    }
 }

@@ -1,0 +1,121 @@
+# NIKHIL KHETAVATH
+
+Phone: +91 7993499546
+Email: khetavathnikhil17@gmail.com
+LinkedIn: linkedin.com/in/nikhilkhetavath
+GitHub: github.com/khetavathnikhil17-afk
+Portfolio: nikhilkhetavath.dev
+
+---
+
+## PROFESSIONAL SUMMARY
+
+AI Product Engineer with experience in building intelligent products, AI-powered applications, data-driven solutions, and scalable digital experiences. Skilled in leveraging artificial intelligence, software engineering, and product thinking to develop impactful solutions that solve real-world problems.
+
+---
+
+## TECHNICAL SKILLS
+
+### Programming Languages
+
+Python, JavaScript, TypeScript, SQL
+
+### AI & Machine Learning
+
+Large Language Models (LLMs), Prompt Engineering, Retrieval-Augmented Generation (RAG), Machine Learning, Deep Learning, Natural Language Processing (NLP), OpenAI API, LangChain, TensorFlow, PyTorch
+
+### Data Science & Analytics
+
+Pandas, NumPy, Scikit-learn, Exploratory Data Analysis (EDA), Data Visualization, Statistical Analysis, Predictive Modeling, Feature Engineering
+
+### Web Development
+
+React.js, Next.js, Node.js, FastAPI, HTML5, CSS3, Tailwind CSS, REST APIs
+
+### Databases
+
+PostgreSQL, MySQL, MongoDB
+
+### Tools & Platforms
+
+Git, GitHub, Docker, AWS, VS Code, Jupyter Notebook, Figma
+
+---
+
+## EXPERIENCE
+
+### GenAI Job Simulation
+
+Forage | May 2025
+
+* Performed data extraction and initial analysis on business datasets.
+* Developed an AI-powered financial chatbot using Generative AI concepts.
+* Applied problem-solving and AI-driven approaches to real-world business scenarios.
+
+### Software Engineering Job Simulation
+
+Forage | May 2025
+
+* Completed end-to-end software engineering tasks in a simulated industry environment.
+* Integrated Kafka, H2 Database, and REST APIs into application workflows.
+* Developed and tested REST API controllers following software engineering best practices.
+
+---
+
+## PROJECTS
+
+### Nyra - Proactive AI Intelligence Platform
+
+**Tech Stack:** Python, LLMs, Speech AI, FastAPI, APIs
+
+* Developed an AI-powered conversational intelligence platform capable of real-time voice interaction and intelligent task execution.
+* Integrated speech recognition, natural language understanding, and voice synthesis to deliver human-like conversations.
+* Designed a scalable architecture for seamless AI-driven automation and user engagement.
+
+### Multivariate Data Analysis Case Study
+
+**Tech Stack:** Python, Pandas, Matplotlib, Seaborn, Statistical Analysis
+
+* Conducted comprehensive statistical and exploratory analysis on complex datasets to uncover patterns and relationships.
+* Applied data preprocessing, visualization, and analytical techniques to derive meaningful business insights.
+* Presented findings through interactive dashboards and reports.
+
+### Manufacturing Defect Analysis
+
+**Tech Stack:** R, SPSS, Excel, PCA, Factor Analysis, Regression Analysis
+
+* Performed multivariate statistical modeling on 1,000 observations from smart manufacturing sensors.
+* Applied PCA and Factor Analysis to reduce 55 variables to 3 factors explaining 70.72% variance.
+* Detected 10 out-of-control signals using Hotelling's T² method, reducing defect detection time by 40%.
+
+---
+
+## EDUCATION
+
+### Bachelor of Science (MSCs) in Computer Science
+
+Osmania University, Hyderabad | AV College of Arts, Science & Commerce
+
+Graduation Year: 2026
+
+Relevant Coursework:
+
+* Artificial Intelligence
+* Machine Learning
+* Data Structures & Algorithms
+* Database Management Systems
+
+---
+
+## CERTIFICATIONS
+
+* GenAI Job Simulation — Forage
+* Software Engineering Job Simulation — Forage
+
+---
+
+## ACHIEVEMENTS
+
+* Built and shipped 10+ AI-powered projects for clients worldwide.
+* Specialized in voice-first AI and autonomous systems.
+* Available for freelance and full-time opportunities.
