@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ["/api/", "/admin/"],
             },
         ],
-        sitemap: "https://nikhilkhetavath.dev/sitemap.xml",
+        sitemap: "https://nikhilkhetavath.vercel.app/sitemap.xml",
     };
 }

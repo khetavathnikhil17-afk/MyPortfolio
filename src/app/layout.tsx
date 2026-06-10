@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   other: {
     "theme-color": "#000000",
   },
-  metadataBase: new URL("https://nikhilkhetavath.dev"),
+  metadataBase: new URL("https://nikhilkhetavath.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://nikhilkhetavath.dev",
+    url: "https://nikhilkhetavath.vercel.app",
     siteName: "Nikhil Khetavath",
     title: "Nikhil Khetavath | AI Product Engineer",
     description: "AI Product Engineer who takes machine learning from Jupyter notebooks to production products. Specializing in voice-first AI, autonomous systems, and full-stack AI applications.",
@@ -67,7 +67,7 @@ export default function RootLayout({
     "@type": "Person",
     name: "Nikhil Khetavath",
     jobTitle: "AI Product Engineer",
-    url: "https://nikhilkhetavath.dev",
+    url: "https://nikhilkhetavath.vercel.app",
     sameAs: [
       "https://github.com/khetavathnikhil17-afk",
       "https://www.linkedin.com/in/nikhilkhetavath-ai?utm_source=share_via&utm_content=profile&utm_medium=member_android",

@@ -59,7 +59,7 @@ export function generateResume(): jsPDF {
     cx += 4; doc.text("|", cx, y); cx += 4;
     cx = hyperlink("LinkedIn", "https://www.linkedin.com/in/nikhilkhetavath-ai?utm_source=share_via&utm_content=profile&utm_medium=member_android", cx);
     cx += 4; doc.text("|", cx, y); cx += 4;
-    cx = hyperlink("Portfolio", "https://nikhilkhetavath.dev", cx);
+    cx = hyperlink("Portfolio", "https://nikhilkhetavath.vercel.app", cx);
     cx += 4; doc.text("|", cx, y); cx += 4;
     hyperlink("Twitter", "https://twitter.com/nikhilkhetavath", cx);
     y += 7;
