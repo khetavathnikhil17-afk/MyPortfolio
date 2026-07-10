@@ -56,7 +56,7 @@ const projectsData = [
         description: "An AI-powered sentiment analysis platform that leverages DeBERTa-v3 and SHAP Explainability to analyze employee feedback with transparent, interpretable predictions. Includes an interactive Streamlit dashboard, analytics, visualizations, and real-time sentiment inference.",
         tags: ["Python", "PyTorch", "DeBERTa-v3", "SHAP", "Streamlit", "Transformers"],
         year: "2025",
-        image: "/projects/startuppulse/dashboard_home.png",
+        image: "/projects/startuppulse/hero.png",
         accent: "#7c5cff",
         link: "/projects/startuppulse",
         metrics: [

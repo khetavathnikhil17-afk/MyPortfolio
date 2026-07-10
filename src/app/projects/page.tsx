@@ -64,7 +64,7 @@ const allProjects = [
         tags: ["Python", "PyTorch", "DeBERTa-v3", "SHAP", "Streamlit", "Transformers"],
         year: "2025",
         type: "Case Study",
-        image: "/projects/startuppulse/dashboard_home.png",
+        image: "/projects/startuppulse/hero.png",
         accent: "#7c5cff",
         link: "/projects/startuppulse",
         metrics: [
