@@ -129,7 +129,7 @@ export default function ManufacturingCaseStudyPage() {
     }, []);
 
     return (
-        <main style={{ position: "relative", backgroundColor: "#000", overflow: "hidden" }}>
+        <main style={{ position: "relative", backgroundColor: "#080808", overflow: "hidden" }}>
             {/* Video background */}
             <div
                 style={{
@@ -197,7 +197,7 @@ export default function ManufacturingCaseStudyPage() {
                         <TextReveal duration={1.2} delay={0.6}>
                             <div
                                 style={{
-                                    background: "linear-gradient(135deg, #51cf66, #f5d4a3, #ffffff)",
+                                    background: "linear-gradient(135deg, #22c55e, #f5d4a3, #ffffff)",
                                     WebkitBackgroundClip: "text",
                                     WebkitTextFillColor: "transparent",
                                     fontStyle: "italic",
@@ -233,7 +233,7 @@ export default function ManufacturingCaseStudyPage() {
                                     letterSpacing: "0.2em",
                                     textTransform: "uppercase",
                                     padding: "0.6rem 1.5rem",
-                                    border: "1px solid rgba(81, 207, 102, 0.3)",
+                                    border: "1px solid rgba(34, 197, 94, 0.3)",
                                     borderRadius: "9999px",
                                 }}
                             >
@@ -274,7 +274,7 @@ export default function ManufacturingCaseStudyPage() {
                                         style={{
                                             fontSize: "clamp(2rem, 4vw, 3rem)",
                                             fontWeight: 700,
-                                            color: "#51cf66",
+                                            color: "#22c55e",
                                             marginBottom: "0.5rem",
                                         }}
                                     >
@@ -401,7 +401,7 @@ export default function ManufacturingCaseStudyPage() {
                                         style={{
                                             fontSize: "1.25rem",
                                             fontWeight: 600,
-                                            color: "#51cf66",
+                                            color: "#22c55e",
                                             marginBottom: "1rem",
                                         }}
                                     >
@@ -536,11 +536,11 @@ export default function ManufacturingCaseStudyPage() {
                                     <div
                                         style={{
                                             fontSize: "0.75rem",
-                                            color: "#51cf66",
+                                            color: "#22c55e",
                                             letterSpacing: "0.2em",
                                             textTransform: "uppercase",
                                             padding: "0.4rem 0.75rem",
-                                            border: "1px solid rgba(81, 207, 102, 0.3)",
+                                            border: "1px solid rgba(34, 197, 94, 0.3)",
                                             borderRadius: "4px",
                                             flexShrink: 0,
                                         }}

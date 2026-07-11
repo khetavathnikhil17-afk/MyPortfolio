@@ -481,7 +481,7 @@ export default function StartupPulseCaseStudyPage() {
     }, [isLightboxOpen, navigateGallery]);
 
     return (
-        <main style={{ position: "relative", backgroundColor: "#000", overflow: "hidden" }}>
+        <main style={{ position: "relative", backgroundColor: "#080808", overflow: "hidden" }}>
             {/* Video background */}
             <div style={{ position: "fixed", inset: 0, zIndex: 0 }}>
                 <HLSVideo src="https://stream.mux.com/01yW6GoUz01OTXk5w1Rt1MHkJWlCGIwj46SUONJZ4DJUE.m3u8" />
@@ -583,7 +583,7 @@ export default function StartupPulseCaseStudyPage() {
                         <p
                             style={{
                                 fontSize: "clamp(1.05rem, 1.6vw, 1.3rem)",
-                                color: "#c8c8d0",
+                                color: "#a8a8b0",
                                 maxWidth: "750px",
                                 lineHeight: 1.7,
                                 marginBottom: "1rem",
@@ -699,15 +699,15 @@ export default function StartupPulseCaseStudyPage() {
                                     alignItems: "center",
                                     gap: "0.6rem",
                                     padding: "0.9rem 2rem",
-                                    color: "#5a5a64",
+                                    color: "#8a8a92",
                                     borderRadius: "9999px",
                                     fontSize: "0.85rem",
                                     fontWeight: 500,
-                                    border: "1px solid rgba(90, 90, 100, 0.15)",
+                                    border: "1px solid rgba(138, 138, 146, 0.15)",
                                     cursor: "default",
                                 }}
                             >
-                                <FileTextIcon size={16} color="#5a5a64" />
+                                <FileTextIcon size={16} color="#8a8a92" />
                                 Research Paper (Soon)
                             </div>
 
@@ -717,15 +717,15 @@ export default function StartupPulseCaseStudyPage() {
                                     alignItems: "center",
                                     gap: "0.6rem",
                                     padding: "0.9rem 2rem",
-                                    color: "#5a5a64",
+                                    color: "#8a8a92",
                                     borderRadius: "9999px",
                                     fontSize: "0.85rem",
                                     fontWeight: 500,
-                                    border: "1px solid rgba(90, 90, 100, 0.15)",
+                                    border: "1px solid rgba(138, 138, 146, 0.15)",
                                     cursor: "default",
                                 }}
                             >
-                                <PlayIcon size={16} color="#5a5a64" />
+                                <PlayIcon size={16} color="#8a8a92" />
                                 Live Demo (Soon)
                             </div>
                         </div>
@@ -976,10 +976,10 @@ export default function StartupPulseCaseStudyPage() {
                                         background: "linear-gradient(180deg, transparent, rgba(0,0,0,0.85))",
                                     }}
                                 >
-                                    <span style={{ fontSize: "0.75rem", color: "#c8c8d0", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600 }}>
+                                    <span style={{ fontSize: "0.75rem", color: "#a8a8b0", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 600 }}>
                                         {screenshots[activeScreenshot].label}
                                     </span>
-                                    <span style={{ fontSize: "0.7rem", color: "#6a6a72", marginLeft: "0.75rem" }}>
+                                    <span style={{ fontSize: "0.7rem", color: "#8a8a92", marginLeft: "0.75rem" }}>
                                         {activeScreenshot + 1} / {screenshots.length}
                                     </span>
                                 </div>
@@ -1158,7 +1158,7 @@ export default function StartupPulseCaseStudyPage() {
                                     />
                                     <div>
                                         <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#f5e6d3" }}>{tech.name}</span>
-                                        <span style={{ fontSize: "0.75rem", color: "#6a6a72", marginLeft: "0.5rem" }}>{tech.description}</span>
+                                        <span style={{ fontSize: "0.75rem", color: "#8a8a92", marginLeft: "0.5rem" }}>{tech.description}</span>
                                     </div>
                                 </div>
                             </FadeUp>
@@ -1669,15 +1669,15 @@ export default function StartupPulseCaseStudyPage() {
                                     alignItems: "center",
                                     gap: "0.6rem",
                                     padding: "1rem 2.25rem",
-                                    color: "#5a5a64",
+                                    color: "#8a8a92",
                                     borderRadius: "9999px",
                                     fontSize: "0.9rem",
                                     fontWeight: 500,
-                                    border: "1px solid rgba(90, 90, 100, 0.15)",
+                                    border: "1px solid rgba(138, 138, 146, 0.15)",
                                     cursor: "default",
                                 }}
                             >
-                                <FileTextIcon size={16} color="#5a5a64" />
+                                <FileTextIcon size={16} color="#8a8a92" />
                                 Research Paper (Soon)
                             </div>
                         </div>
@@ -1691,14 +1691,14 @@ export default function StartupPulseCaseStudyPage() {
                                     display: "inline-flex",
                                     alignItems: "center",
                                     gap: "0.5rem",
-                                    color: "#6a6a72",
+                                    color: "#8a8a92",
                                     textDecoration: "none",
                                     fontSize: "0.85rem",
                                     fontWeight: 500,
                                     transition: "color 0.3s ease",
                                 }}
                                 onMouseEnter={(e) => { e.currentTarget.style.color = "#f5e6d3"; }}
-                                onMouseLeave={(e) => { e.currentTarget.style.color = "#6a6a72"; }}
+                                onMouseLeave={(e) => { e.currentTarget.style.color = "#8a8a92"; }}
                             >
                                 <ArrowLeftIcon size={14} color="currentColor" />
                                 Back to Projects
@@ -1792,7 +1792,7 @@ export default function StartupPulseCaseStudyPage() {
                                 background: "rgba(0,0,0,0.7)",
                                 borderRadius: "9999px",
                                 fontSize: "0.8rem",
-                                color: "#c8c8d0",
+                                color: "#a8a8b0",
                                 letterSpacing: "0.1em",
                                 textTransform: "uppercase",
                             }}
