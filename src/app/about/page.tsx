@@ -188,7 +188,7 @@ export default function AboutPage() {
             <section
                 style={{
                     padding: "6rem 3rem",
-                    maxWidth: "1600px",
+                    maxWidth: "1200px",
                     margin: "0 auto",
                     borderTop: "1px solid rgba(232, 184, 120, 0.15)",
                     borderBottom: "1px solid rgba(232, 184, 120, 0.15)",
@@ -243,7 +243,7 @@ export default function AboutPage() {
             <section
                 style={{
                     padding: "8rem 3rem",
-                    maxWidth: "1600px",
+                    maxWidth: "1200px",
                     margin: "0 auto",
                 }}
             >
@@ -341,7 +341,7 @@ export default function AboutPage() {
             <section
                 style={{
                     padding: "8rem 3rem",
-                    maxWidth: "1600px",
+                    maxWidth: "1200px",
                     margin: "0 auto",
                 }}
             >
@@ -445,7 +445,7 @@ export default function AboutPage() {
             <section
                 style={{
                     padding: "8rem 3rem",
-                    maxWidth: "1600px",
+                    maxWidth: "1200px",
                     margin: "0 auto",
                 }}
             >
@@ -528,7 +528,7 @@ export default function AboutPage() {
             <section
                 style={{
                     padding: "8rem 3rem",
-                    maxWidth: "1600px",
+                    maxWidth: "1200px",
                     margin: "0 auto",
                 }}
             >

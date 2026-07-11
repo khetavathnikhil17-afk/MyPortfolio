@@ -276,7 +276,7 @@ export default function ContactPage() {
             <section
                 style={{
                     padding: "4rem 3rem",
-                    maxWidth: "1600px",
+                    maxWidth: "1200px",
                     margin: "0 auto",
                     borderTop: "1px solid rgba(232, 184, 120, 0.15)",
                     borderBottom: "1px solid rgba(232, 184, 120, 0.15)",
@@ -846,7 +846,17 @@ function FormField({
     required?: boolean;
 }) {
     const [focused, setFocused] = useState(false);
+    const [touched, setTouched] = useState(false);
     const fieldId = label.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+    const showError = touched && !focused && required && value.trim() === "";
+    const showEmailError = touched && !focused && type === "email" && value.trim() !== "" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+    const borderColor = showError || showEmailError
+        ? "#ef4444"
+        : focused
+        ? "#e8b878"
+        : "rgba(232, 184, 120, 0.15)";
 
     return (
         <div>
@@ -856,7 +866,7 @@ function FormField({
                     display: "block",
                     marginBottom: "0.75rem",
                     fontSize: "0.65rem",
-                    color: "#8a8a92",
+                    color: showError || showEmailError ? "#ef4444" : "#8a8a92",
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
                 }}
@@ -869,15 +879,17 @@ function FormField({
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
                     onFocus={() => setFocused(true)}
-                    onBlur={() => setFocused(false)}
+                    onBlur={() => { setFocused(false); setTouched(true); }}
                     required={required}
                     rows={6}
                     aria-required={required}
+                    aria-invalid={showError || showEmailError}
+                    aria-describedby={showError ? `${fieldId}-error` : showEmailError ? `${fieldId}-email-error` : undefined}
                     style={{
                         width: "100%",
                         padding: "1rem 1.25rem",
                         background: "rgba(232, 184, 120, 0.02)",
-                        border: `1px solid ${focused ? "#e8b878" : "rgba(232, 184, 120, 0.15)"}`,
+                        border: `1px solid ${borderColor}`,
                         borderRadius: "8px",
                         color: "#f5e6d3",
                         fontSize: "1rem",
@@ -894,14 +906,16 @@ function FormField({
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
                     onFocus={() => setFocused(true)}
-                    onBlur={() => setFocused(false)}
+                    onBlur={() => { setFocused(false); setTouched(true); }}
                     required={required}
                     aria-required={required}
+                    aria-invalid={showError || showEmailError}
+                    aria-describedby={showError ? `${fieldId}-error` : showEmailError ? `${fieldId}-email-error` : undefined}
                     style={{
                         width: "100%",
                         padding: "1rem 1.25rem",
                         background: "rgba(232, 184, 120, 0.02)",
-                        border: `1px solid ${focused ? "#e8b878" : "rgba(232, 184, 120, 0.15)"}`,
+                        border: `1px solid ${borderColor}`,
                         borderRadius: "8px",
                         color: "#f5e6d3",
                         fontSize: "1rem",
@@ -910,6 +924,16 @@ function FormField({
                         transition: "all 0.3s ease",
                     }}
                 />
+            )}
+            {showError && (
+                <p id={`${fieldId}-error`} role="alert" style={{ fontSize: "0.75rem", color: "#ef4444", marginTop: "0.5rem" }}>
+                    {label} is required
+                </p>
+            )}
+            {showEmailError && (
+                <p id={`${fieldId}-email-error`} role="alert" style={{ fontSize: "0.75rem", color: "#ef4444", marginTop: "0.5rem" }}>
+                    Please enter a valid email address
+                </p>
             )}
         </div>
     );
