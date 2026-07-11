@@ -634,7 +634,7 @@ export default function StartupPulseCaseStudyPage() {
                         <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginTop: "2rem" }}>
                             <MagneticButton strength={0.3}>
                                 <Link
-                                    href="https://github.com/khetavathnikhil17-afk"
+                                    href="https://github.com/khetavathnikhil17-afk/StartupPulse-AI"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{
@@ -695,42 +695,6 @@ export default function StartupPulseCaseStudyPage() {
                                     Documentation
                                 </Link>
                             </MagneticButton>
-
-                            <div
-                                style={{
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    gap: "0.6rem",
-                                    padding: "0.9rem 2rem",
-                                    color: "#8a8a92",
-                                    borderRadius: "9999px",
-                                    fontSize: "0.85rem",
-                                    fontWeight: 500,
-                                    border: "1px solid rgba(138, 138, 146, 0.15)",
-                                    cursor: "default",
-                                }}
-                            >
-                                <FileTextIcon size={16} color="#8a8a92" />
-                                Research Paper (Soon)
-                            </div>
-
-                            <div
-                                style={{
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    gap: "0.6rem",
-                                    padding: "0.9rem 2rem",
-                                    color: "#8a8a92",
-                                    borderRadius: "9999px",
-                                    fontSize: "0.85rem",
-                                    fontWeight: 500,
-                                    border: "1px solid rgba(138, 138, 146, 0.15)",
-                                    cursor: "default",
-                                }}
-                            >
-                                <PlayIcon size={16} color="#8a8a92" />
-                                Live Demo (Soon)
-                            </div>
                         </div>
                     </FadeUp>
                 </section>
@@ -1615,7 +1579,7 @@ export default function StartupPulseCaseStudyPage() {
                         <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
                             <MagneticButton strength={0.4}>
                                 <Link
-                                    href="https://github.com/khetavathnikhil17-afk"
+                                    href="https://github.com/khetavathnikhil17-afk/StartupPulse-AI"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{
@@ -1665,24 +1629,6 @@ export default function StartupPulseCaseStudyPage() {
                                     Download Documentation
                                 </Link>
                             </MagneticButton>
-
-                            <div
-                                style={{
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    gap: "0.6rem",
-                                    padding: "1rem 2.25rem",
-                                    color: "#8a8a92",
-                                    borderRadius: "9999px",
-                                    fontSize: "0.9rem",
-                                    fontWeight: 500,
-                                    border: "1px solid rgba(138, 138, 146, 0.15)",
-                                    cursor: "default",
-                                }}
-                            >
-                                <FileTextIcon size={16} color="#8a8a92" />
-                                Research Paper (Soon)
-                            </div>
                         </div>
                     </FadeUp>
 

@@ -233,7 +233,7 @@ export default function ProjectsPage() {
                                 borderRadius: "9999px",
                             }}
                         >
-                            <NumberCounter end={allProjects.length} duration={2} /> Projects
+                            {allProjects.length} Projects
                             Archived
                         </div>
                     </div>

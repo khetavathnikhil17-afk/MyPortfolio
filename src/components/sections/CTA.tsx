@@ -25,8 +25,8 @@ const CTA = () => {
     };
 
     const infoStats = [
-        { label: "Response Time", value: 24, suffix: "h", prefix: "Within ", detail: "Always quick" },
-        { label: "Project Timeline", value: 8, suffix: " weeks", prefix: "2-", detail: "Depending on scope" },
+        { label: "Response Time", value: "24", suffix: "h", prefix: "Within ", detail: "Always quick" },
+        { label: "Project Timeline", value: "2-8", suffix: " weeks", prefix: "", detail: "Depending on scope" },
     ];
 
     return (
@@ -295,13 +295,7 @@ const CTA = () => {
                                         marginBottom: "0.5rem",
                                     }}
                                 >
-                                    {item.prefix}
-                                    <NumberCounter
-                                        end={item.value}
-                                        duration={2.5}
-                                        separator=","
-                                    />
-                                    {item.suffix}
+                                    {item.prefix}{item.value}{item.suffix}
                                 </div>
                                 <div
                                     style={{
