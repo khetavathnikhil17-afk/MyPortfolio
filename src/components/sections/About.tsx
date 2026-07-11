@@ -121,6 +121,7 @@ const About = () => {
                                             src="/images/profile.jpg"
                                             alt="Nikhil Khetavath"
                                             fill
+                                            loading="lazy"
                                             style={{ objectFit: "cover" }}
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />

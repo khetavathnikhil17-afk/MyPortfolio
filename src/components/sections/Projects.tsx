@@ -157,6 +157,7 @@ const ProjectPlanet = ({
                                         src={project.image}
                                         alt={project.title}
                                         fill
+                                        loading="lazy"
                                         style={{
                                             objectFit: "cover",
                                         }}

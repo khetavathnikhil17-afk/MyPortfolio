@@ -719,23 +719,33 @@ export default function AboutPage() {
             </section>
 
             <style jsx>{`
-        @media (max-width: 900px) {
+        @media (max-width: 1024px) {
           :global(.stats-grid) {
             grid-template-columns: repeat(2, 1fr) !important;
             gap: 2rem !important;
           }
           :global(.story-grid),
-          :global(.values-grid) {
+          :global(.values-grid),
+          :global(.skill-bars-grid) {
             grid-template-columns: 1fr !important;
             gap: 3rem !important;
           }
           :global(.timeline-line) {
-            left: 0 !important;
+            display: none !important;
           }
           :global(.timeline-row),
           :global(.expertise-row) {
             grid-template-columns: 1fr !important;
             gap: 1rem !important;
+          }
+          :global(.timeline-dot) {
+            display: none !important;
+          }
+        }
+        @media (max-width: 600px) {
+          :global(.stats-grid) {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 1.5rem !important;
           }
         }
       `}</style>

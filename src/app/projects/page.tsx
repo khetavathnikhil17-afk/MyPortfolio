@@ -327,8 +327,8 @@ export default function ProjectsPage() {
                         <FadeUp key={project.id} delay={i * 0.1} duration={1}>
                             <Link
                                 href={project.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                target={project.link.startsWith("http") ? "_blank" : undefined}
+                                rel={project.link.startsWith("http") ? "noopener noreferrer" : undefined}
                                 onMouseEnter={() => setHoveredId(project.id)}
                                 onMouseLeave={() => setHoveredId(null)}
                                 style={{
@@ -374,6 +374,7 @@ export default function ProjectsPage() {
                                                 src={project.image}
                                                 alt={project.title}
                                                 fill
+                                                loading="lazy"
                                                 style={{ objectFit: "cover" }}
                                                 sizes="(max-width: 768px) 100vw, 50vw"
                                             />

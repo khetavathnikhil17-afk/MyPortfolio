@@ -48,6 +48,7 @@ export default function ProjectShowcase({
                             src={image.src}
                             alt={image.alt}
                             fill
+                            loading="lazy"
                             style={{ objectFit: "cover" }}
                             sizes="(max-width: 768px) 100vw, 60vw"
                         />

@@ -3,15 +3,15 @@
 import { useRef, useState, useEffect } from "react";
 
 const technologies = [
-    { name: "Next.js", icon: "▲" },
-    { name: "React", icon: "⚛" },
-    { name: "Python", icon: "◆" },
+    { name: "Next.js", icon: "N" },
+    { name: "React", icon: "R" },
+    { name: "Python", icon: "Py" },
     { name: "TypeScript", icon: "TS" },
-    { name: "OpenAI", icon: "●" },
-    { name: "FastAPI", icon: "⚡" },
-    { name: "PostgreSQL", icon: "DB" },
-    { name: "Docker", icon: "🐳" },
-    { name: "AWS", icon: "☁" },
+    { name: "OpenAI", icon: "AI" },
+    { name: "FastAPI", icon: "FA" },
+    { name: "PostgreSQL", icon: "PG" },
+    { name: "Docker", icon: "D" },
+    { name: "AWS", icon: "W" },
     { name: "TensorFlow", icon: "TF" },
 ];
 
@@ -95,8 +95,18 @@ export default function TechLogos() {
                         >
                             <span
                                 style={{
-                                    fontSize: "1.25rem",
+                                    fontSize: "0.75rem",
                                     color: "#e8b878",
+                                    fontWeight: 700,
+                                    letterSpacing: "0.05em",
+                                    minWidth: "28px",
+                                    height: "28px",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    border: "1px solid rgba(232, 184, 120, 0.3)",
+                                    borderRadius: "6px",
+                                    flexShrink: 0,
                                 }}
                             >
                                 {tech.icon}

@@ -75,6 +75,7 @@ export default function ExitPopup() {
             >
                 <button
                     onClick={handleDismiss}
+                    aria-label="Close popup"
                     style={{
                         position: "absolute",
                         top: "1rem",

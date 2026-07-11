@@ -33,7 +33,6 @@ const Hero = () => {
                         padding: "0 3rem",
                         maxWidth: "1600px",
                         margin: "0 auto",
-                        pointerEvents: "none",
                     }}
                 >
                     {/* ===== PROFILE + NAME ===== */}
