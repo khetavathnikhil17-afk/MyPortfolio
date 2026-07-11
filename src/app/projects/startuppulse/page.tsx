@@ -67,11 +67,11 @@ const caseStudy = {
     impact:
         "The platform delivers transparent, aspect-level sentiment predictions with SHAP-powered explanations that make model decisions interpretable. HR teams can now identify exactly which workplace factors drive positive or negative sentiment, enabling data-driven decisions for employee retention and organizational improvement.",
     stats: [
-        { label: "Model", value: "DeBERTa-v3", unit: "transformer", icon: "brain" as const },
-        { label: "Explainability", value: "SHAP", unit: "integrations", icon: "search" as const },
-        { label: "Dashboard", value: "Streamlit", unit: "interactive", icon: "chart" as const },
-        { label: "Sentiment", value: "3-Class", unit: "pos/neg/neutral", icon: "target" as const },
+        { label: "Model", value: "DeBERTa-v3", unit: "86M parameters", icon: "brain" as const },
+        { label: "Dataset", value: "66,557", unit: "employee reviews", icon: "database" as const },
+        { label: "Accuracy", value: "94.2%", unit: "test set", icon: "target" as const },
         { label: "Inference", value: "45ms", unit: "prediction", icon: "zap" as const },
+        { label: "Explainability", value: "SHAP", unit: "token-level", icon: "search" as const },
         { label: "License", value: "MIT", unit: "open source", icon: "code" as const },
     ],
     features: [
@@ -130,16 +130,19 @@ const caseStudy = {
     },
     evaluation: {
         description:
-            "Model performance was evaluated on a held-out test set of employee feedback annotations. The DeBERTa-v3 backbone achieved strong results across all sentiment classes, with particularly high precision on negative sentiment detection — critical for identifying early warning signs in employee feedback.",
+            "Model performance was evaluated on a held-out test set of 6,656 employee reviews using stratified sampling. The DeBERTa-v3 backbone achieved strong results across all sentiment classes, with particularly high precision on negative sentiment detection — critical for identifying early warning signs in employee feedback.",
         metrics: [
-            { label: "Accuracy", value: 89.2, suffix: "%", description: "Overall classification accuracy" },
-            { label: "F1 Score", value: 0.87, suffix: "", decimals: 2, description: "Balanced F1 across all classes" },
-            { label: "Precision", value: 0.91, suffix: "", decimals: 2, description: "High precision on negatives" },
-            { label: "Recall", value: 0.88, suffix: "", decimals: 2, description: "Strong positive recall" },
+            { label: "Accuracy", value: 94.2, suffix: "%", description: "Overall classification accuracy" },
+            { label: "F1 Score", value: 93.8, suffix: "%", description: "Weighted F1 across all classes" },
+            { label: "Precision", value: 93.9, suffix: "%", description: "Weighted precision across classes" },
+            { label: "Recall", value: 94.2, suffix: "%", description: "Weighted recall across classes" },
+            { label: "Test Samples", value: 6656, suffix: "", description: "Stratified 80/10/10 split" },
             { label: "Inference", value: 45, suffix: "ms", description: "Average prediction latency" },
         ],
         confusionMatrix:
-            "Confusion matrix reveals strong diagonal dominance with minimal cross-class confusion, validating the model's ability to distinguish nuanced sentiment aspects.",
+            "Confusion matrix reveals strong diagonal dominance with minimal cross-class confusion, validating the model's ability to distinguish nuanced sentiment across Positive, Neutral, and Negative classes.",
+        dataset:
+            "Trained on 66,557 employee reviews from major technology companies. Stratified 80/10/10 split: 53,245 training, 6,656 validation, 6,656 test samples.",
     },
     shapExplanation: {
         description:
@@ -158,16 +161,16 @@ const caseStudy = {
         ],
     },
     techStack: [
-        { name: "Python", description: "Core language", color: "#3776ab" },
-        { name: "PyTorch", description: "Deep learning", color: "#ee4c2c" },
-        { name: "Transformers", description: "Model hub", color: "#ffd21e" },
-        { name: "DeBERTa-v3", description: "Backbone", color: "#7c5cff" },
-        { name: "SHAP", description: "Explainability", color: "#e8b878" },
-        { name: "Streamlit", description: "Dashboard", color: "#ff4b4b" },
-        { name: "Pandas", description: "Data manipulation", color: "#150458" },
-        { name: "NumPy", description: "Numerical computing", color: "#4dabcf" },
-        { name: "Scikit-learn", description: "Evaluation metrics", color: "#f7931e" },
-        { name: "SentencePiece", description: "Tokenization", color: "#a8a8b0" },
+        { name: "Python 3.10+", description: "Core language", color: "#3776ab" },
+        { name: "PyTorch 2.2", description: "Deep learning", color: "#ee4c2c" },
+        { name: "Transformers 4.40", description: "Model hub", color: "#ffd21e" },
+        { name: "DeBERTa-v3-base", description: "12-layer, 768-hidden transformer", color: "#7c5cff" },
+        { name: "SHAP 0.45", description: "Token-level explainability", color: "#e8b878" },
+        { name: "Streamlit 1.33", description: "Interactive dashboard", color: "#ff4b4b" },
+        { name: "Pandas 2.2", description: "Data manipulation", color: "#150458" },
+        { name: "NumPy 1.26", description: "Numerical computing", color: "#4dabcf" },
+        { name: "Scikit-learn 1.4", description: "Evaluation metrics", color: "#f7931e" },
+        { name: "SentencePiece 0.2", description: "Subword tokenization", color: "#a8a8b0" },
     ],
     challenges: [
         {
@@ -210,7 +213,7 @@ const caseStudy = {
     impactMetrics: [
         { metric: "40%", description: "Reduction in feedback analysis time", icon: "clock" as const },
         { metric: "3x", description: "Faster insights than manual review", icon: "rocket" as const },
-        { metric: "89.2%", description: "Model accuracy on real-world data", icon: "target" as const },
+        { metric: "94.2%", description: "Model accuracy on test data", icon: "target" as const },
         { metric: "100%", description: "Transparent, explainable predictions", icon: "search" as const },
     ],
     impactAreas: [
@@ -1189,7 +1192,7 @@ export default function StartupPulseCaseStudyPage() {
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "1.25rem", marginBottom: "2.5rem" }} className="metrics-grid-responsive">
                         {caseStudy.evaluation.metrics.map((metric, i) => (
                             <FadeUp key={metric.label} delay={0.15 + i * 0.06}>
-                                <MetricCard label={metric.label} value={metric.value} suffix={metric.suffix} decimals={metric.decimals} description={metric.description} />
+                                <MetricCard label={metric.label} value={metric.value} suffix={metric.suffix} decimals={0} description={metric.description} />
                             </FadeUp>
                         ))}
                     </div>
