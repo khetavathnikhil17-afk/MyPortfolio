@@ -44,17 +44,13 @@ Git, GitHub, Docker, AWS, VS Code, Jupyter Notebook, Figma
 
 ## EXPERIENCE
 
-### AI/ML with Python Intern
-
-Teach Maven | Sep 2025 – Oct 2025
+### AI/ML with Python Intern | Teach Maven | Sep 2025 – Oct 2025
 
 * Developed machine learning models using Python for real-world datasets.
 * Performed data preprocessing, feature engineering, and model evaluation.
 * Worked with Python libraries including Pandas, NumPy, Scikit-learn, and TensorFlow.
 
-### Software Engineering Job Simulation
-
-Forage | May 2025
+### Software Engineering Job Simulation | Forage | May 2025
 
 * Completed end-to-end software engineering tasks in a simulated industry environment.
 * Integrated Kafka, H2 Database, and REST APIs into application workflows.
