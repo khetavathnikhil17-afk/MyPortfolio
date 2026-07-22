@@ -44,13 +44,13 @@ Git, GitHub, Docker, AWS, VS Code, Jupyter Notebook, Figma
 
 ## EXPERIENCE
 
-### GenAI Job Simulation
+### AI/ML with Python Intern
 
-Forage | May 2025
+Teach Maven | Sep 2025 – Oct 2025
 
-* Performed data extraction and initial analysis on business datasets.
-* Developed an AI-powered financial chatbot using Generative AI concepts.
-* Applied problem-solving and AI-driven approaches to real-world business scenarios.
+* Developed machine learning models using Python for real-world datasets.
+* Performed data preprocessing, feature engineering, and model evaluation.
+* Worked with Python libraries including Pandas, NumPy, Scikit-learn, and TensorFlow.
 
 ### Software Engineering Job Simulation
 
@@ -60,17 +60,39 @@ Forage | May 2025
 * Integrated Kafka, H2 Database, and REST APIs into application workflows.
 * Developed and tested REST API controllers following software engineering best practices.
 
+### GenAI Job Simulation
+
+Forage | May 2025
+
+* Performed data extraction and initial analysis on business datasets.
+* Developed an AI-powered financial chatbot using Generative AI concepts.
+* Applied problem-solving and AI-driven approaches to real-world business scenarios.
+
 ---
 
 ## PROJECTS
 
-### Nyra - Proactive AI Intelligence Platform
+### StartupPulse AI – Explainable Aspect-Based Sentiment Analysis
 
-**Tech Stack:** Python, LLMs, Speech AI, FastAPI, APIs
+**Tech Stack:** Python | DeBERTa-v3 | SHAP | Streamlit | Hugging Face
 
-* Developed an AI-powered conversational intelligence platform capable of real-time voice interaction and intelligent task execution.
-* Integrated speech recognition, natural language understanding, and voice synthesis to deliver human-like conversations.
-* Designed a scalable architecture for seamless AI-driven automation and user engagement.
+* Built an AI system to analyze employee reviews using DeBERTa-v3.
+* Performed aspect-based sentiment analysis with explainable AI (SHAP).
+* Developed an interactive Streamlit dashboard for predictions and insights.
+* Improved transparency by showing the key factors behind each prediction.
+
+[GitHub](https://github.com/khetavathnikhil17-afk/StartupPulse-AI)
+
+### Nyra – AI Voice Companion
+
+**Tech Stack:** Python | Next.js | Gemini | LiveKit | ElevenLabs | React
+
+* Developed a voice-based AI companion with real-time conversations.
+* Integrated Gemini AI, ElevenLabs, and LiveKit for voice interactions.
+* Added long-term memory using Mem0 and ChromaDB.
+* Built a modern web interface using Next.js and React.
+
+[GitHub](https://github.com/khetavathnikhil17-afk/Nyra.git)
 
 ### Multivariate Data Analysis Case Study
 

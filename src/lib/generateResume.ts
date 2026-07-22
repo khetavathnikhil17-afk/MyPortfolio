@@ -86,15 +86,15 @@ export function generateResume(): jsPDF {
     section("EXPERIENCE");
 
     setFont(10, "bold");
-    doc.text("GenAI Job Simulation", margin + 2, y);
+    doc.text("AI/ML with Python Intern", margin + 2, y);
     setFont(10, "normal");
-    doc.text(" | Forage | May 2025", margin + 2 + doc.getTextWidth("GenAI Job Simulation"), y);
+    doc.text(" | Teach Maven | Sep 2025 – Oct 2025", margin + 2 + doc.getTextWidth("AI/ML with Python Intern"), y);
     line(5);
 
     setFont(10, "normal");
-    doc.text("• Performed data extraction and initial analysis on business datasets.", margin + 2, y); line(4.5);
-    doc.text("• Developed an AI-powered financial chatbot using Generative AI concepts.", margin + 2, y); line(4.5);
-    doc.text("• Applied problem-solving and AI-driven approaches to real-world business scenarios.", margin + 2, y); line(6);
+    doc.text("• Developed machine learning models using Python for real-world datasets.", margin + 2, y); line(4.5);
+    doc.text("• Performed data preprocessing, feature engineering, and model evaluation.", margin + 2, y); line(4.5);
+    doc.text("• Worked with Python libraries including Pandas, NumPy, Scikit-learn, and TensorFlow.", margin + 2, y); line(6);
 
     setFont(10, "bold");
     doc.text("Software Engineering Job Simulation", margin + 2, y);
@@ -105,38 +105,73 @@ export function generateResume(): jsPDF {
     setFont(10, "normal");
     doc.text("• Completed end-to-end software engineering tasks in a simulated industry environment.", margin + 2, y); line(4.5);
     doc.text("• Integrated Kafka, H2 Database, and REST APIs into application workflows.", margin + 2, y); line(4.5);
-    doc.text("• Developed and tested REST API controllers following software engineering best practices.", margin + 2, y); line(5);
+    doc.text("• Developed and tested REST API controllers following software engineering best practices.", margin + 2, y); line(6);
+
+    setFont(10, "bold");
+    doc.text("GenAI Job Simulation", margin + 2, y);
+    setFont(10, "normal");
+    doc.text(" | Forage | May 2025", margin + 2 + doc.getTextWidth("GenAI Job Simulation"), y);
+    line(5);
+
+    setFont(10, "normal");
+    doc.text("• Performed data extraction and initial analysis on business datasets.", margin + 2, y); line(4.5);
+    doc.text("• Developed an AI-powered financial chatbot using Generative AI concepts.", margin + 2, y); line(4.5);
+    doc.text("• Applied problem-solving and AI-driven approaches to real-world business scenarios.", margin + 2, y); line(5);
 
     // ── PROJECTS ──
     section("PROJECTS");
 
-    const nyraLinkX = margin + 2;
+    // StartupPulse AI
+    const startupPulseLinkX = margin + 2;
     setFont(10, "normal");
-    const linkText = "[Link]";
-    const linkW = doc.getTextWidth(linkText);
-    doc.text(linkText, nyraLinkX, y);
-    doc.link(nyraLinkX, y - 3.5, linkW, 4.5, { url: "https://github.com/khetavathnikhil17-afk/Nyra.git" });
+    const linkText2 = "[Link]";
+    const linkW2 = doc.getTextWidth(linkText2);
+    doc.text(linkText2, startupPulseLinkX, y);
+    doc.link(startupPulseLinkX, y - 3.5, linkW2, 4.5, { url: "https://github.com/khetavathnikhil17-afk/StartupPulse-AI" });
     doc.setDrawColor(100, 100, 100);
     doc.setLineWidth(0.2);
-    doc.line(nyraLinkX, y + 0.5, nyraLinkX + linkW, y + 0.5);
+    doc.line(startupPulseLinkX, y + 0.5, startupPulseLinkX + linkW2, y + 0.5);
 
     setFont(10, "bold");
-    doc.text("  Nyra – Proactive AI Intelligence Platform", nyraLinkX + linkW, y);
+    doc.text("  StartupPulse AI – Explainable Aspect-Based Sentiment Analysis", startupPulseLinkX + linkW2, y);
     line(5);
 
     setFont(10, "normal");
     doc.text("• Tech Stack", margin + 2, y);
     setFont(10, "bold");
-    doc.text(" - Python, LLMs, Speech AI, FastAPI, APIs", margin + 2 + doc.getTextWidth("• Tech Stack"), y);
+    doc.text(" - Python, DeBERTa-v3, SHAP, Streamlit, Hugging Face", margin + 2 + doc.getTextWidth("• Tech Stack"), y);
     line(4.5);
 
     setFont(10, "normal");
-    doc.text("• Developed an AI-powered conversational intelligence platform capable of", margin + 2, y); line(4.5);
-    doc.text("  real-time voice interaction and intelligent task execution.", margin + 2, y); line(4.5);
-    doc.text("• Integrated speech recognition, natural language understanding, and voice", margin + 2, y); line(4.5);
-    doc.text("  synthesis to deliver human-like conversations.", margin + 2, y); line(4.5);
-    doc.text("• Designed a scalable architecture for seamless AI-driven automation and", margin + 2, y); line(4.5);
-    doc.text("  user engagement.", margin + 2, y); line(6);
+    doc.text("• Built an AI system to analyze employee reviews using DeBERTa-v3.", margin + 2, y); line(4.5);
+    doc.text("• Performed aspect-based sentiment analysis with explainable AI (SHAP).", margin + 2, y); line(4.5);
+    doc.text("• Developed an interactive Streamlit dashboard for predictions and insights.", margin + 2, y); line(4.5);
+    doc.text("• Improved transparency by showing the key factors behind each prediction.", margin + 2, y); line(6);
+
+    // Nyra
+    const nyraLinkX = margin + 2;
+    setFont(10, "normal");
+    doc.text(linkText2, nyraLinkX, y);
+    doc.link(nyraLinkX, y - 3.5, linkW2, 4.5, { url: "https://github.com/khetavathnikhil17-afk/Nyra.git" });
+    doc.setDrawColor(100, 100, 100);
+    doc.setLineWidth(0.2);
+    doc.line(nyraLinkX, y + 0.5, nyraLinkX + linkW2, y + 0.5);
+
+    setFont(10, "bold");
+    doc.text("  Nyra – AI Voice Companion", nyraLinkX + linkW2, y);
+    line(5);
+
+    setFont(10, "normal");
+    doc.text("• Tech Stack", margin + 2, y);
+    setFont(10, "bold");
+    doc.text(" - Python, Next.js, Gemini, LiveKit, ElevenLabs, React", margin + 2 + doc.getTextWidth("• Tech Stack"), y);
+    line(4.5);
+
+    setFont(10, "normal");
+    doc.text("• Developed a voice-based AI companion with real-time conversations.", margin + 2, y); line(4.5);
+    doc.text("• Integrated Gemini AI, ElevenLabs, and LiveKit for voice interactions.", margin + 2, y); line(4.5);
+    doc.text("• Added long-term memory using Mem0 and ChromaDB.", margin + 2, y); line(4.5);
+    doc.text("• Built a modern web interface using Next.js and React.", margin + 2, y); line(6);
 
     setFont(10, "bold");
     doc.text("Multivariate Data Analysis Case Study", margin + 2, y);

@@ -22,9 +22,8 @@ const allProjects = [
         id: "01",
         title: "Nyra AI",
         category: "AI Product",
-        description:
-            "Voice-first AI assistant that understands context, remembers conversations, and executes tasks in real-time. Built with LiveKit for streaming, OpenAI for reasoning, and FastAPI for orchestration.",
-        tags: ["Python", "LiveKit", "OpenAI API", "FastAPI", "React.js"],
+        description: "Developed a voice-based AI companion with real-time conversations. Integrated Gemini AI, ElevenLabs, and LiveKit for voice interactions. Added long-term memory using Mem0 and ChromaDB.",
+        tags: ["Python", "Next.js", "Gemini", "LiveKit", "ElevenLabs", "React"],
         year: "2026",
         type: "In Development",
         image: "/projects/nyra/portrait.png",
@@ -59,9 +58,8 @@ const allProjects = [
         id: "03",
         title: "StartupPulse AI",
         category: "AI Product",
-        description:
-            "An AI-powered sentiment analysis platform that leverages DeBERTa-v3 and SHAP Explainability to analyze employee feedback with transparent, interpretable predictions. Includes an interactive Streamlit dashboard, analytics, visualizations, and real-time sentiment inference.",
-        tags: ["Python", "PyTorch", "DeBERTa-v3", "SHAP", "Streamlit", "Transformers"],
+        description: "Built an AI system to analyze employee reviews using DeBERTa-v3. Performed aspect-based sentiment analysis with explainable AI (SHAP). Developed an interactive Streamlit dashboard for predictions and insights.",
+        tags: ["Python", "DeBERTa-v3", "SHAP", "Streamlit", "Hugging Face"],
         year: "2025",
         type: "Case Study",
         image: "/projects/startuppulse/hero.png",
