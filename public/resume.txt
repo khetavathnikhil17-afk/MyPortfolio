@@ -78,14 +78,6 @@ Git, GitHub, Docker, AWS, VS Code, Jupyter Notebook, Figma
 
 [GitHub](https://github.com/khetavathnikhil17-afk/Nyra.git)
 
-### Manufacturing Defect Analysis
-
-**Tech Stack:** R | SPSS | Excel | PCA | Factor Analysis | Regression Analysis
-
-* Performed multivariate statistical modeling on 1,000 observations from smart manufacturing sensors.
-* Applied PCA and Factor Analysis to reduce 55 variables to 3 factors explaining 70.72% variance.
-* Detected 10 out-of-control signals using Hotelling's T² method, reducing defect detection time by 40%.
-
 ---
 
 ## EDUCATION

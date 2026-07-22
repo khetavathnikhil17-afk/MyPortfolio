@@ -157,25 +157,7 @@ export function generateResume(): jsPDF {
     doc.text("• Developed a voice-based AI companion with real-time conversations.", margin + 2, y); line(4.5);
     doc.text("• Integrated Gemini AI, ElevenLabs, and LiveKit for voice interactions.", margin + 2, y); line(4.5);
     doc.text("• Added long-term memory using Mem0 and ChromaDB.", margin + 2, y); line(4.5);
-    doc.text("• Built a modern web interface using Next.js and React.", margin + 2, y); line(6);
-
-    setFont(10, "bold");
-    doc.text("Manufacturing Defect Analysis", margin + 2, y);
-    line(5);
-
-    setFont(10, "normal");
-    doc.text("• Tech Stack", margin + 2, y);
-    setFont(10, "bold");
-    doc.text(" - R, SPSS, Excel, PCA, Factor Analysis, Regression Analysis", margin + 2 + doc.getTextWidth("• Tech Stack"), y);
-    line(4.5);
-
-    setFont(10, "normal");
-    doc.text("• Performed multivariate statistical modeling on 1,000 observations from", margin + 2, y); line(4.5);
-    doc.text("  smart manufacturing sensors.", margin + 2, y); line(4.5);
-    doc.text("• Applied PCA and Factor Analysis to reduce 55 variables to 3 factors", margin + 2, y); line(4.5);
-    doc.text("  explaining 70.72% variance.", margin + 2, y); line(4.5);
-    doc.text("• Detected 10 out-of-control signals using Hotelling's T² method, reducing", margin + 2, y); line(4.5);
-    doc.text("  defect detection time by 40%.", margin + 2, y); line(5);
+    doc.text("• Built a modern web interface using Next.js and React.", margin + 2, y); line(5);
 
     // ── EDUCATION ──
     section("EDUCATION");
