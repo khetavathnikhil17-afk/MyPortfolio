@@ -94,8 +94,6 @@ Git, GitHub, Docker, AWS, VS Code, Jupyter Notebook, Figma
 
 AV College of Arts, Science & Commerce, Hyderabad
 
-Relevant Coursework: Artificial Intelligence, Machine Learning, Data Structures & Algorithms, Database Management Systems
-
 ---
 
 ## CERTIFICATIONS

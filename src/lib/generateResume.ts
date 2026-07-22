@@ -179,13 +179,10 @@ export function generateResume(): jsPDF {
 
     // ── EDUCATION ──
     section("EDUCATION");
-    setFont(10, "bold");
+    setFont(10, "normal");
     doc.text("Bachelor of Science (B.Sc) in Computer Science | Osmania University | 2023 – 2026", margin + 2, y);
     line(5);
     doc.text("AV College of Arts, Science & Commerce, Hyderabad", margin + 2, y);
-    line(4.5);
-    doc.text("Relevant Coursework: Artificial Intelligence, Machine Learning, Data Structures", margin + 2, y); line(4.5);
-    doc.text("& Algorithms, Database Management Systems", margin + 2, y);
 
     return doc;
 }
