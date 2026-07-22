@@ -60,14 +60,6 @@ Forage | May 2025
 * Integrated Kafka, H2 Database, and REST APIs into application workflows.
 * Developed and tested REST API controllers following software engineering best practices.
 
-### GenAI Job Simulation
-
-Forage | May 2025
-
-* Performed data extraction and initial analysis on business datasets.
-* Developed an AI-powered financial chatbot using Generative AI concepts.
-* Applied problem-solving and AI-driven approaches to real-world business scenarios.
-
 ---
 
 ## PROJECTS
@@ -93,14 +85,6 @@ Forage | May 2025
 * Built a modern web interface using Next.js and React.
 
 [GitHub](https://github.com/khetavathnikhil17-afk/Nyra.git)
-
-### Multivariate Data Analysis Case Study
-
-**Tech Stack:** Python, Pandas, Matplotlib, Seaborn, Statistical Analysis
-
-* Conducted comprehensive statistical and exploratory analysis on complex datasets to uncover patterns and relationships.
-* Applied data preprocessing, visualization, and analytical techniques to derive meaningful business insights.
-* Presented findings through interactive dashboards and reports.
 
 ### Manufacturing Defect Analysis
 
@@ -131,7 +115,6 @@ Relevant Coursework:
 
 ## CERTIFICATIONS
 
-* GenAI Job Simulation — Forage
 * Software Engineering Job Simulation — Forage
 
 ---

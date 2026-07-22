@@ -105,18 +105,7 @@ export function generateResume(): jsPDF {
     setFont(10, "normal");
     doc.text("• Completed end-to-end software engineering tasks in a simulated industry environment.", margin + 2, y); line(4.5);
     doc.text("• Integrated Kafka, H2 Database, and REST APIs into application workflows.", margin + 2, y); line(4.5);
-    doc.text("• Developed and tested REST API controllers following software engineering best practices.", margin + 2, y); line(6);
-
-    setFont(10, "bold");
-    doc.text("GenAI Job Simulation", margin + 2, y);
-    setFont(10, "normal");
-    doc.text(" | Forage | May 2025", margin + 2 + doc.getTextWidth("GenAI Job Simulation"), y);
-    line(5);
-
-    setFont(10, "normal");
-    doc.text("• Performed data extraction and initial analysis on business datasets.", margin + 2, y); line(4.5);
-    doc.text("• Developed an AI-powered financial chatbot using Generative AI concepts.", margin + 2, y); line(4.5);
-    doc.text("• Applied problem-solving and AI-driven approaches to real-world business scenarios.", margin + 2, y); line(5);
+    doc.text("• Developed and tested REST API controllers following software engineering best practices.", margin + 2, y); line(5);
 
     // ── PROJECTS ──
     section("PROJECTS");
@@ -172,23 +161,6 @@ export function generateResume(): jsPDF {
     doc.text("• Integrated Gemini AI, ElevenLabs, and LiveKit for voice interactions.", margin + 2, y); line(4.5);
     doc.text("• Added long-term memory using Mem0 and ChromaDB.", margin + 2, y); line(4.5);
     doc.text("• Built a modern web interface using Next.js and React.", margin + 2, y); line(6);
-
-    setFont(10, "bold");
-    doc.text("Multivariate Data Analysis Case Study", margin + 2, y);
-    line(5);
-
-    setFont(10, "normal");
-    doc.text("• Tech Stack", margin + 2, y);
-    setFont(10, "bold");
-    doc.text(" - Python, Pandas, Matplotlib, Seaborn, Statistical Analysis", margin + 2 + doc.getTextWidth("• Tech Stack"), y);
-    line(4.5);
-
-    setFont(10, "normal");
-    doc.text("• Conducted comprehensive statistical and exploratory analysis on complex", margin + 2, y); line(4.5);
-    doc.text("  datasets to uncover patterns and relationships.", margin + 2, y); line(4.5);
-    doc.text("• Applied data preprocessing, visualization, and analytical techniques to", margin + 2, y); line(4.5);
-    doc.text("  derive meaningful business insights.", margin + 2, y); line(4.5);
-    doc.text("• Presented findings through interactive dashboards and reports.", margin + 2, y); line(5);
 
     // ── EDUCATION ──
     section("EDUCATION");
