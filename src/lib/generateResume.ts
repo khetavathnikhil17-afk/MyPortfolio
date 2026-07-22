@@ -87,9 +87,7 @@ export function generateResume(): jsPDF {
     section("EXPERIENCE");
 
     setFont(10, "bold");
-    doc.text("AI/ML with Python Intern", margin + 2, y);
-    setFont(10, "normal");
-    doc.text(" | Teach Maven | Sep 2025 – Oct 2025", margin + 2 + doc.getTextWidth("AI/ML with Python Intern"), y);
+    doc.text("AI/ML with Python Intern | Teach Maven | Sep 2025 – Oct 2025", margin + 2, y);
     line(5);
 
     setFont(10, "normal");
@@ -98,9 +96,7 @@ export function generateResume(): jsPDF {
     doc.text("• Worked with Python libraries including Pandas, NumPy, Scikit-learn, and TensorFlow.", margin + 2, y); line(6);
 
     setFont(10, "bold");
-    doc.text("Software Engineering Job Simulation", margin + 2, y);
-    setFont(10, "normal");
-    doc.text(" | Forage | May 2025", margin + 2 + doc.getTextWidth("Software Engineering Job Simulation"), y);
+    doc.text("Software Engineering Job Simulation | Forage | May 2025", margin + 2, y);
     line(5);
 
     setFont(10, "normal");
@@ -184,9 +180,7 @@ export function generateResume(): jsPDF {
     // ── EDUCATION ──
     section("EDUCATION");
     setFont(10, "bold");
-    doc.text("Bachelor of Science (B.Sc) in Computer Science", margin + 2, y);
-    setFont(10, "normal");
-    doc.text(" | Osmania University | 2023 – 2026", margin + 2 + doc.getTextWidth("Bachelor of Science (B.Sc) in Computer Science"), y);
+    doc.text("Bachelor of Science (B.Sc) in Computer Science | Osmania University | 2023 – 2026", margin + 2, y);
     line(5);
     doc.text("AV College of Arts, Science & Commerce, Hyderabad", margin + 2, y);
     line(4.5);
