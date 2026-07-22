@@ -1,10 +1,6 @@
 # NIKHIL KHETAVATH
 
-Phone: +91 7993499546
-Email: khetavathnikhil17@gmail.com
-LinkedIn: linkedin.com/in/nikhilkhetavath
-GitHub: github.com/khetavathnikhil17-afk
-Portfolio: nikhilkhetavath.dev
+Phone: +91 7993499546 | Email: khetavathnikhil17@gmail.com | LinkedIn: linkedin.com/in/nikhilkhetavath | GitHub: github.com/khetavathnikhil17-afk | Portfolio: nikhilkhetavath.dev
 
 ---
 
@@ -84,7 +80,7 @@ Git, GitHub, Docker, AWS, VS Code, Jupyter Notebook, Figma
 
 ### Manufacturing Defect Analysis
 
-**Tech Stack:** R, SPSS, Excel, PCA, Factor Analysis, Regression Analysis
+**Tech Stack:** R | SPSS | Excel | PCA | Factor Analysis | Regression Analysis
 
 * Performed multivariate statistical modeling on 1,000 observations from smart manufacturing sensors.
 * Applied PCA and Factor Analysis to reduce 55 variables to 3 factors explaining 70.72% variance.
@@ -94,18 +90,11 @@ Git, GitHub, Docker, AWS, VS Code, Jupyter Notebook, Figma
 
 ## EDUCATION
 
-### Bachelor of Science (MSCs) in Computer Science
+### Bachelor of Science (B.Sc) in Computer Science | Osmania University | 2023 – 2026
 
-Osmania University, Hyderabad | AV College of Arts, Science & Commerce
+AV College of Arts, Science & Commerce, Hyderabad
 
-Graduation Year: 2026
-
-Relevant Coursework:
-
-* Artificial Intelligence
-* Machine Learning
-* Data Structures & Algorithms
-* Database Management Systems
+Relevant Coursework: Artificial Intelligence, Machine Learning, Data Structures & Algorithms, Database Management Systems
 
 ---
 
@@ -119,4 +108,3 @@ Relevant Coursework:
 
 * Built and shipped 10+ AI-powered projects for clients worldwide.
 * Specialized in voice-first AI and autonomous systems.
-* Available for freelance and full-time opportunities.

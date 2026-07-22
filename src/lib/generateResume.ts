@@ -67,16 +67,17 @@ export function generateResume(): jsPDF {
     // ── SUMMARY ──
     section("SUMMARY");
     setFont(10, "normal");
-    doc.text("Building intelligent products at the intersection of AI, data science, and product", margin + 2, y);
-    line(4.5);
-    doc.text("innovation to create impactful real-world experiences.", margin + 2, y);
+    doc.text("AI Product Engineer with experience in building intelligent products, AI-powered", margin + 2, y); line(4.5);
+    doc.text("applications, data-driven solutions, and scalable digital experiences. Skilled in", margin + 2, y); line(4.5);
+    doc.text("leveraging artificial intelligence, software engineering, and product thinking to", margin + 2, y); line(4.5);
+    doc.text("develop impactful solutions that solve real-world problems.", margin + 2, y);
     line(5);
 
     // ── TECHNICAL SKILLS ──
     section("TECHNICAL SKILLS");
     bullet("Frontend", "React.js, Next.js, TypeScript, Tailwind CSS");
     bullet("Backend", "Python, Node.js, FastAPI, PostgreSQL, MongoDB");
-    bullet("AI/ML", "Open-AI API, Lang-Chain, TensorFlow, PyTorch, LLMs");
+    bullet("AI/ML", "OpenAI API, LangChain, TensorFlow, PyTorch, LLMs");
     bullet("Data Science", "EDA, Feature Engineering, Statistical Analysis, Predictive Modeling");
     bullet("Databases", "MySQL, PostgreSQL, MongoDB");
     bullet("Cloud & DevOps", "AWS, Docker, Git, GitHub");
@@ -113,16 +114,16 @@ export function generateResume(): jsPDF {
     // StartupPulse AI
     const startupPulseLinkX = margin + 2;
     setFont(10, "normal");
-    const linkText2 = "[Link]";
-    const linkW2 = doc.getTextWidth(linkText2);
-    doc.text(linkText2, startupPulseLinkX, y);
-    doc.link(startupPulseLinkX, y - 3.5, linkW2, 4.5, { url: "https://github.com/khetavathnikhil17-afk/StartupPulse-AI" });
+    const linkText = "[Link]";
+    const linkW = doc.getTextWidth(linkText);
+    doc.text(linkText, startupPulseLinkX, y);
+    doc.link(startupPulseLinkX, y - 3.5, linkW, 4.5, { url: "https://github.com/khetavathnikhil17-afk/StartupPulse-AI" });
     doc.setDrawColor(100, 100, 100);
     doc.setLineWidth(0.2);
-    doc.line(startupPulseLinkX, y + 0.5, startupPulseLinkX + linkW2, y + 0.5);
+    doc.line(startupPulseLinkX, y + 0.5, startupPulseLinkX + linkW, y + 0.5);
 
     setFont(10, "bold");
-    doc.text("  StartupPulse AI – Explainable Aspect-Based Sentiment Analysis", startupPulseLinkX + linkW2, y);
+    doc.text("  StartupPulse AI – Explainable Aspect-Based Sentiment Analysis", startupPulseLinkX + linkW, y);
     line(5);
 
     setFont(10, "normal");
@@ -140,14 +141,14 @@ export function generateResume(): jsPDF {
     // Nyra
     const nyraLinkX = margin + 2;
     setFont(10, "normal");
-    doc.text(linkText2, nyraLinkX, y);
-    doc.link(nyraLinkX, y - 3.5, linkW2, 4.5, { url: "https://github.com/khetavathnikhil17-afk/Nyra.git" });
+    doc.text(linkText, nyraLinkX, y);
+    doc.link(nyraLinkX, y - 3.5, linkW, 4.5, { url: "https://github.com/khetavathnikhil17-afk/Nyra.git" });
     doc.setDrawColor(100, 100, 100);
     doc.setLineWidth(0.2);
-    doc.line(nyraLinkX, y + 0.5, nyraLinkX + linkW2, y + 0.5);
+    doc.line(nyraLinkX, y + 0.5, nyraLinkX + linkW, y + 0.5);
 
     setFont(10, "bold");
-    doc.text("  Nyra – AI Voice Companion", nyraLinkX + linkW2, y);
+    doc.text("  Nyra – AI Voice Companion", nyraLinkX + linkW, y);
     line(5);
 
     setFont(10, "normal");
@@ -162,11 +163,35 @@ export function generateResume(): jsPDF {
     doc.text("• Added long-term memory using Mem0 and ChromaDB.", margin + 2, y); line(4.5);
     doc.text("• Built a modern web interface using Next.js and React.", margin + 2, y); line(6);
 
+    setFont(10, "bold");
+    doc.text("Manufacturing Defect Analysis", margin + 2, y);
+    line(5);
+
+    setFont(10, "normal");
+    doc.text("• Tech Stack", margin + 2, y);
+    setFont(10, "bold");
+    doc.text(" - R, SPSS, Excel, PCA, Factor Analysis, Regression Analysis", margin + 2 + doc.getTextWidth("• Tech Stack"), y);
+    line(4.5);
+
+    setFont(10, "normal");
+    doc.text("• Performed multivariate statistical modeling on 1,000 observations from", margin + 2, y); line(4.5);
+    doc.text("  smart manufacturing sensors.", margin + 2, y); line(4.5);
+    doc.text("• Applied PCA and Factor Analysis to reduce 55 variables to 3 factors", margin + 2, y); line(4.5);
+    doc.text("  explaining 70.72% variance.", margin + 2, y); line(4.5);
+    doc.text("• Detected 10 out-of-control signals using Hotelling's T² method, reducing", margin + 2, y); line(4.5);
+    doc.text("  defect detection time by 40%.", margin + 2, y); line(5);
+
     // ── EDUCATION ──
     section("EDUCATION");
+    setFont(10, "bold");
+    doc.text("Bachelor of Science (B.Sc) in Computer Science", margin + 2, y);
     setFont(10, "normal");
-    doc.text("Osmania University, Hyderabad | Bachelor of Science (MSCs) in Computer Science", margin + 2, y); line(4.5);
-    doc.text("AV College of Arts, Science & Commerce | 2023 – 2026", margin + 2, y);
+    doc.text(" | Osmania University | 2023 – 2026", margin + 2 + doc.getTextWidth("Bachelor of Science (B.Sc) in Computer Science"), y);
+    line(5);
+    doc.text("AV College of Arts, Science & Commerce, Hyderabad", margin + 2, y);
+    line(4.5);
+    doc.text("Relevant Coursework: Artificial Intelligence, Machine Learning, Data Structures", margin + 2, y); line(4.5);
+    doc.text("& Algorithms, Database Management Systems", margin + 2, y);
 
     return doc;
 }
