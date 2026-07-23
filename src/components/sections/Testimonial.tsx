@@ -8,8 +8,8 @@ import FadeUp from "@/components/animations/FadeUp";
 
 const testimonial = {
     review:
-        "Nikhil delivered an exceptional AI-powered product that exceeded our expectations. His ability to translate complex requirements into a seamless, production-ready solution was impressive. The attention to detail and commitment to quality made the entire process smooth and efficient.",
-    name: "StartupPulse AI",
+        "Working with Nikhil was an exceptional experience. His support throughout the project was invaluable, and his patience, professionalism, and accountability stood out at every stage. He was always willing to help, communicated clearly, and ensured every detail was handled with care. The quality of his work and commitment to delivering the best possible outcome made the entire process seamless. I truly appreciate his dedication and look forward to collaborating with him again in the future. I highly recommend Nikhil to anyone looking for a reliable and skilled professional.",
+    name: "Akhil",
 };
 
 const Testimonial = () => {
